@@ -48,9 +48,17 @@ body {
 
 /* LEFT HERO */
 .hero-video {
-  height: 420px;
-  background: #cfcfcf;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   position: relative;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-overlay {
