@@ -137,6 +137,8 @@ body {
   margin-top: auto;    /* pushes button to bottom */
 }
 /* ========== BOTTOM SECTION ========== */
+/* ========== BOTTOM SECTION ========== */
+
 .menu-section {
   grid-column: 1 / -1;
   margin-top: 80px;
@@ -144,56 +146,76 @@ body {
 
 .bottom-layout {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1.3fr 1fr;
   gap: 60px;
+  max-width: 1100px;
+  margin: 120px auto;
+  align-items: start;
 }
 
-/* LEFT TALL IMAGE */
-.bottom-image {
+/* ===== LEFT COLUMN ===== */
+
+.bottom-left img {
+  width: 100%;
   height: 420px;
-  background: #cfcfcf;
-}
-
-/* MIDDLE MENU */
-.bottom-content h2 {
+  object-fit: cover;
+  display: block;
   margin-bottom: 20px;
 }
 
-.bottom-content h3 {
-  margin-bottom: 10px;
+.menu-description h2 {
+  margin-bottom: 15px;
 }
 
-.bottom-content p {
-  margin-bottom: 20px;
+.menu-description p {
+  line-height: 1.6;
 }
 
-.menu-item-block {
-  height: 140px;
-  background: #d9d9d9;
-  margin-bottom: 20px;
+/* ===== MIDDLE COLUMN ===== */
+
+.bottom-middle h2 {
+  margin-bottom: 30px;
 }
 
-/* RIGHT RESERVATION */
-.bottom-reserve {
+.dish-card {
+  margin-bottom: 40px;
+}
+
+.dish-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.dish-card h3 {
+  margin-bottom: 8px;
+}
+
+.dish-card p {
+  line-height: 1.5;
+}
+
+/* ===== RIGHT COLUMN ===== */
+
+.bottom-right {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.small-video {
-  height: 140px;
-  background: #bdbdbd;
+.bottom-right video {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
 }
 
-.reservation-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.bottom-right h2 {
+  margin-bottom: 10px;
 }
 
-.reservation-form select,
-.reservation-form button {
-  padding: 8px;
-  border: 1px solid #111;
-  background: white;
+.bottom-right p {
+  line-height: 1.6;
 }

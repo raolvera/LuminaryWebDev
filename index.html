@@ -55,21 +55,21 @@
 
     <!-- Small Video + Text Rows -->
     <div class="sidebar-row">
-      <video muted>
+     <video controls>
         <source src="videos/behind-scenes.mp4" type="video/mp4">
       </video>
       <p>Behind the Scene</p>
     </div>
 
     <div class="sidebar-row">
-      <video muted>
+      <video controls>
         <source src="videos/chef-technique.mp4" type="video/mp4">
       </video>
       <p>Chef technique clip</p>
     </div>
 
     <div class="sidebar-row">
-      <video muted>
+     <video controls>
         <source src="videos/philosophy.mp4" type="video/mp4">
       </video>
       <p>Philosophy quote</p>
@@ -80,36 +80,59 @@
   </div>
 </aside>
 
-    <!-- BOTTOM SECTION -->
     <section class="menu-section">
-        <div class="bottom-layout">
+  <div class="bottom-layout">
 
-            <div class="bottom-image"></div>
+    <!-- LEFT: Big Menu Image + Seasonal Description -->
+    <div class="bottom-left">
+      <img src="images/menu-large.jpg" alt="Seasonal Menu">
 
-            <div class="bottom-content">
-                <h2>Seasonal Menu</h2>
-                <h3>Header (H3)</h3>
-                <p>Menu description text goes here.</p>
-                <div class="menu-item-block"></div>
-                <div class="menu-item-block"></div>
-            </div>
+      <div class="menu-description">
+        <h2>Seasonal Menu</h2>
+        <p>
+          The menu evolves with the seasons. Our chef selects ingredients at their peak,
+          crafting dishes that reflect freshness, balance, and intention.
+        </p>
+      </div>
+    </div>
 
-            <div class="bottom-reserve">
-                <div class="reservation-controls">
-                    <select><option>Date</option></select>
-                    <select><option>Time</option></select>
-                    <select><option>Party Size</option></select>
-                    <button>Reserve</button>
-                </div>
+    <!-- MIDDLE: Chef Recommendations -->
+    <div class="bottom-middle">
+      <h2>Chef's Recommendations</h2>
 
-                <div class="video-row">
-                    <div class="small-video"></div>
-                    <h2>Header (H2)</h2>
-                </div>
-            </div>
+      <div class="dish-card">
+        <img src="images/dish1.png" alt="Chef Recommendation">
+        <h3>Heirloom Tomato Tart</h3>
+        <p>
+          Grilled mushrooms with asparagus and a soft egg
+        </p>
+      </div>
 
-        </div>
-    </section>
+      <div class="dish-card">
+        <img src="images/dish2.png" alt="Chef Recommendation">
+        <h3>Seared Wild Salmon</h3>
+        <p>
+          Roasted root vegetables,
+          and a citrus herb reduction.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT: Farm to Table Video -->
+    <div class="bottom-right">
+      <video muted controls playsinline>
+        <source src="videos/farm-to-table.mp4" type="video/mp4">
+      </video>
+
+      <h2>Farm to Table</h2>
+      <p>
+        We partner with local farms to bring sustainable,
+        responsibly sourced ingredients directly to your table.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
