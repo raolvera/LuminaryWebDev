@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luminary | Book</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="menu.js" defer></script>
+    <script src="booking.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="index.html">
+          <div class="logo">Luminary</div>
+      </a>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Private Events</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="book.html" class="btn-outline">Book a Table</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+    <section class="about-banner">
+        <div class="container">
+            <h1>Make Your Reservation</h1>
+        </div>
+    </section>
+
+    <section class="reservation-section">
+        <div class="form-container">
+            <form id="reservationForm" name="reservations" method="POST" data-netlify="true">
+                <p id="stepIndicator" class="step-text">Step 1 of 2</p>
+                <h2 id="stepTitle">Booking Information</h2>
+
+                <div id="step1">
+                    <div class="form-grid">
+                        <div class="field">
+                            <label>Party Size *</label>
+                            <select name="party_size" id="partySize" required>
+                                <option value="" disabled selected>Select size</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Date *</label>
+                            <input type="text" id="dateInput" name="date" placeholder="Select date" readonly required>
+                        </div>
+                        <div class="field">
+                            <label>Occasion</label>
+                            <input type="text" name="occasion" placeholder="Anniversary, Birthday, etc.">
+                        </div>
+                        <div class="field">
+                            <label>Time *</label>
+                            <input type="text" id="timeInput" name="time" placeholder="Select time" readonly required>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Picker Modal -->
+                    <div id="datePickerModal" class="picker-modal" style="display: none;">
+                        <div class="picker-content">
+                            <div class="picker-header">
+                                <h3>Select Date</h3>
+                                <button type="button" class="close-picker" onclick="closeDatePicker()">&times;</button>
+                            </div>
+                            <div class="month-nav">
+                                <button type="button" onclick="changeMonth(-1)">&lt;</button>
+                                <span id="monthYear">January 2026</span>
+                                <button type="button" onclick="changeMonth(1)">&gt;</button>
+                            </div>
+                            <div class="calendar" id="calendar"></div>
+                            <button type="button" class="select-btn" onclick="confirmDate()">Select Date</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Time Picker Modal -->
+                    <div id="timePickerModal" class="picker-modal" style="display: none;">
+                        <div class="picker-content">
+                            <div class="picker-header">
+                                <h3>Select Time</h3>
+                                <button type="button" class="close-picker" onclick="closeTimePicker()">&times;</button>
+                            </div>
+                            <div class="time-slots" id="timeSlots"></div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn-next" onclick="nextStep()">Next</button>
+                </div>
+
+                <div id="step2" class="hidden">
+                    <button type="button" class="back-link" onclick="prevStep()">&lt; Back</button>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label>Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="field">
+                            <label>Email *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="field">
+                            <label>Phone *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="field">
+                            <label>Dietary Restrictions</label>
+                            <input type="text" name="dietary">
+                        </div>
+                        <div class="field full-width">
+                            <label>Special Requests</label>
+                            <textarea name="requests" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-confirm">Confirm Reservation</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <footer class="container">
+      <div class="footer-grid">
+        <div class="footer-col contact-info">
+          <h4>Contact Us</h4>
+          <p>0420 Solstice Way<br />Tempe, AZ 85281</p>
+          <p>(480) 888-5862</p>
+          <p>hello@luminary.com</p>
+          <p>events@luminary.com</p>
+          <p class="hours">Saturday-Sunday<br />10:00 AM 10:00 PM</p>
+        </div>
+
+        <div class="footer-col helpful-links">
+          <h4>Helpful Links</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li>FAQs</li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li>Careers</li>
+          </ul>
+        </div>
+
+        <div class="footer-col follow-us">
+          <h4>Follow Us</h4>
+          <p>Instagram</p>
+          <p>Facebook</p>
+          <div class="copyright">&copy; <a href="index.html">Luminary</a> 2026</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
