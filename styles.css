@@ -688,6 +688,93 @@ footer {
     background: #fff;
 }
 
+.email-note {
+    font-size: 12px;
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+}
+
+.reservation-section .card {
+    width: 90%;
+    max-width: 550px;
+    background: #f0f0f0;
+    padding: 40px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-inner {
+    background: #f0f0f0;
+    text-align: left;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.sub-header {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: bold;
+}
+
+.details-box {
+    border: 1px solid #999;
+    padding: 25px;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #000;
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.sq-icon {
+    width: 16px;
+    height: 16px;
+    background: #ccc;
+    margin-right: 15px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.btn {
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #000;
+    display: inline-block;
+}
+
+.btn-home {
+    background: white;
+    color: black;
+}
+
+.btn-menu {
+    background: black;
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
