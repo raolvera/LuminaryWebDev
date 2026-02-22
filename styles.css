@@ -85,14 +85,13 @@ html {
 .hero {
   height: 85vh;
   display: flex;
-  align-items: center; /* Vertically center the content */
+  align-items: center; 
   background-color: #0a0a0a;
   background-image: url("hero-bg.jpg"); /* Replace with your actual image */
   background-size: cover;
   background-position: center;
 }
 
-/* Positioning the block "more right" */
 .hero-content {
   max-width: 550px;
   text-align: left;
@@ -704,9 +703,16 @@ footer {
         transition: right 0.3s;
         z-index: 999;
     }
-    .nav-links.active { right: 0; }
-    .zigzag, .content-row, .about-row { flex-direction: column; gap: 30px; }
-    .zigzag.reverse { flex-direction: column; }
+    .nav-links.active { 
+		right: 0; 
+	}
+    .zigzag, .content-row, .about-row { 
+		flex-direction: column; 
+		gap: 30px; 
+	}
+    .zigzag.reverse { 
+		flex-direction: column; 
+	}
     .placeholder-box, .content-media, .video-placeholder, .image-placeholder { 
         min-height: 300px; 
         height: 300px; 
