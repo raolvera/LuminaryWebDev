@@ -1,142 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Luminary — The Living Menu</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminary - Seasonal Fine Dining</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="logo">Luminary</div>
-
-  <nav class="nav-links">
-    <a href="#">About</a>
-    <a href="#">Menu</a>
-    <a href="#">Events</a>
-  </nav>
-
-  <div class="nav-spacer"></div>
-</header>
-
-<main class="layout">
-
-  <!-- LEFT HERO -->
-  <section class="hero-left">
-    <div class="hero-video">
-      <video autoplay muted loop playsinline>
-        <source src="videos/hero.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="hero-description">
-      <h2>The Living Menu</h2>
-      <p>Seasonal expression through evolving cuisine.</p>
-    </div>
-  </section>
-
-  <!-- RIGHT SIDEBAR -->
-  <aside class="video-sidebar">
-    <div class="sidebar-box">
-
-      <div class="sidebar-video">
-        <video autoplay muted loop playsinline>
-          <source src="videos/sidebar.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="sidebar-row">
-        <video controls>
-          <source src="videos/behind-scenes.mp4" type="video/mp4">
-        </video>
-        <p>Behind the Scene</p>
-      </div>
-
-      <div class="sidebar-row">
-        <video controls>
-          <source src="videos/chef-technique.mp4" type="video/mp4">
-        </video>
-        <p>Chef Technique Clip</p>
-      </div>
-
-      <div class="sidebar-row">
-        <video controls>
-          <source src="videos/philosophy.mp4" type="video/mp4">
-        </video>
-        <p>Philosophy Quote</p>
-      </div>
-
-      <button class="reserve-btn">Reserve</button>
-
-    </div>
-  </aside>
-
-  <!-- BOTTOM SECTION -->
-  <section class="menu-section">
-    <div class="bottom-layout">
-
-      <!-- LEFT -->
-      <div class="bottom-left">
-        <div class="menu-description">
-          <h2>Seasonal Menu</h2>
-          <p>
-            The menu evolves with the seasons. Our chef selects ingredients at their peak,
-            crafting dishes that reflect freshness, balance, and intention.
-          </p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">LUMINARY</a>
+            <button type="button" class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#chef">Chef</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Private Events</a></li>
+                <li><a href="#reserve" class="btn-reserve">Reserve</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <img src="images/menu.png" alt="Seasonal Menu">
-      </div>
-
-      <!-- MIDDLE -->
-      <div class="bottom-middle">
-        <h2>Chef's Recommendations</h2>
-
-        <!-- 🔥 FIREBASE INJECTS HERE -->
-        <div id="menu-items"></div>
-
-        <!-- Reservation Form -->
-        <div class="reservation-form">
-          <h3>Reserve a Table</h3>
-
-          <select>
-            <option>Select Date</option>
-          </select>
-
-          <select>
-            <option>Select Time</option>
-          </select>
-
-          <select>
-            <option>Party Size</option>
-          </select>
-
-          <button class="reserve-button">Reserve</button>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">A Living Menu</h1>
+            <p class="hero-subtitle" id="seasonalTagline">Experience cuisine that evolves with the seasons</p>
+            <div class="hero-season" id="currentSeason"></div>
+            <a href="#reserve" class="cta-button">Reserve Your Table</a>
         </div>
-      </div>
+    </section>
 
-      <!-- RIGHT -->
-      <div class="bottom-right">
-        <video muted controls playsinline>
-          <source src="videos/farm-to-table.mp4" type="video/mp4">
-        </video>
+    <section class="philosophy-preview">
+        <div class="container">
+            <h2>Our Philosophy</h2>
+            <p id="philosophyPreview">At Luminary, we believe food should reflect the rhythm of nature. Our menu transforms with each season, celebrating ingredients at their peak.</p>
+            <a href="#chef" class="link-arrow">Discover Our Story →</a>
+        </div>
+    </section>
 
-        <h2>Farm to Table</h2>
-        <p>
-          We partner with local farms to bring sustainable,
-          responsibly sourced ingredients directly to your table.
-        </p>
-      </div>
+    <section id="chef" class="chef-story">
+        <div class="container">
+            <div class="chef-grid">
+                <div class="chef-image">
+                    <div class="image-placeholder" id="chefImage"></div>
+                </div>
+                <div class="chef-content">
+                    <h2 id="chefName">Chef's Story</h2>
+                    <div id="chefBio">
+                        <p>Every dish tells a story of the season. My approach is simple: let ingredients speak for themselves.</p>
+                        <p>Trained across three continents, I've learned that the best cuisine honors time and place. At Luminary, we work directly with local farmers and foragers to bring you flavors that can only exist right now, in this moment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-  </section>
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Seasonal Menu</h2>
+            <div class="menu-season-indicator" id="menuSeasonIndicator"></div>
+            <div class="menu-grid" id="menuGrid"></div>
+        </div>
+    </section>
 
-</main>
+    <section id="reserve" class="reservation-section">
+        <div class="container">
+            <h2>Reserve Your Experience</h2>
+            <form id="reservationForm" class="reservation-form" name="reservations" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="reservations">
+                <p class="honeypot"><label>Don't fill this out: <input name="bot-field"></label></p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select time</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="17:30">5:30 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guests">Guests</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7+ Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Special Requests</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Confirm Reservation</button>
+            </form>
+            <div id="confirmationMessage" class="confirmation-message"></div>
+        </div>
+    </section>
 
-<!-- IMPORTANT: MUST BE MODULE -->
-<script type="module" src="script.js"></script>
+    <section id="events" class="events-section">
+        <div class="container">
+            <h2>Private Dining & Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3>Private Dining Room</h3>
+                    <p>Intimate space for 8-12 guests with custom seasonal tasting menu</p>
+                    <ul>
+                        <li>Dedicated sommelier</li>
+                        <li>Customizable menu</li>
+                        <li>Private chef interaction</li>
+                    </ul>
+                </div>
+                <div class="event-card">
+                    <h3>Chef's Table</h3>
+                    <p>Front-row seat to culinary artistry for 4-6 guests</p>
+                    <ul>
+                        <li>Kitchen counter seating</li>
+                        <li>Course-by-course presentation</li>
+                        <li>Wine pairing included</li>
+                    </ul>
+                </div>
+                <div class="event-card">
+                    <h3>Full Venue Buyout</h3>
+                    <p>Exclusive access for celebrations up to 40 guests</p>
+                    <ul>
+                        <li>Entire restaurant</li>
+                        <li>Bespoke menu design</li>
+                        <li>Event coordination</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#reserve" class="cta-button">Inquire About Events</a>
+        </div>
+    </section>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>LUMINARY</h3>
+                    <p>A living menu experience</p>
+                </div>
+                <div>
+                    <p>123 Culinary Lane<br>City, State 12345</p>
+                    <p>reservations@luminary.com<br>(555) 123-4567</p>
+                </div>
+                <div>
+                    <p>Hours:<br>Tue-Sat: 5:00 PM - 10:00 PM<br>Closed Sun-Mon</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Dont edit commented out
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="cms-data.js"></script>
+    <script src="app.js"></script>*//-->
 </body>
 </html>
