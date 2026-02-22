@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmation | Luminary</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="menu.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html">
+                <div class="logo">Luminary</div>
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Private Events</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="book.html" class="btn-outline">Book a Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-banner">
+            <div class="container">
+                <h1>Your Reservation is Confirmed</h1>
+            </div>
+        </section>
+
+        <section class="reservation-section">
+            <div class="card">
+                <div class="card-inner">
+                    <h2>Thank you for booking at Luminary.</h2>
+                    <div class="sub-header">Here are your reservation details:</div>
+
+                    <div class="details-box">
+                        <div class="detail-row">
+                            <div class="sq-icon"></div>
+                            <span><strong>Luminary Restaurant:</strong><br>0420 Solstice Way, Tempe AZ 85281</span>
+                        </div>
+                        <div class="detail-row">
+                            <div class="sq-icon"></div>
+                            <span><strong>Date & Time:</strong><br><span id="confirmDate">Saturday, March 15</span> - <span id="confirmTime">6:30 PM</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <div class="sq-icon"></div>
+                            <span><strong>Party Size:</strong> <span id="confirmParty">2</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <div class="sq-icon"></div>
+                            <span><strong>Occasion:</strong> <span id="confirmOccasion">Anniversary</span></span>
+                        </div>
+                    </div>
+
+                    <p class="email-note">A confirmation email has been sent to: <strong id="confirmEmail">jasminea@gmail.com</strong></p>
+
+                    <div class="btn-container">
+                        <a href="index.html" class="btn btn-home">Home</a>
+                        <a href="menu.html" class="btn btn-menu">Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <div class="footer-grid">
+            <div class="footer-col contact-info">
+                <h4>Contact Us</h4>
+                <p>0420 Solstice Way<br>Tempe, AZ 85281</p>
+                <p>(480) 888-5862</p>
+                <p>hello@luminary.com</p>
+                <p>events@luminary.com</p>
+                <p class="hours">Saturday-Sunday<br>10:00 AM 10:00 PM</p>
+            </div>
+
+            <div class="footer-col helpful-links">
+                <h4>Helpful Links</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li>FAQs</li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+
+            <div class="footer-col follow-us">
+                <h4>Follow Us</h4>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <div class="copyright">&copy; <a href="index.html">Luminary</a> 2026</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
