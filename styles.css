@@ -688,44 +688,115 @@ footer {
         transition: right 0.3s;
         z-index: 999;
     }
-    .nav-links.active { right: 0; }
-    .zigzag, .content-row, .about-row { flex-direction: column; gap: 30px; }
-    .zigzag.reverse { flex-direction: column; }
-    .placeholder-box, .content-media, .video-placeholder, .image-placeholder { min-height: 300px; height: 300px; width: calc(100% - 40px); margin-left: 20px; margin-right: 20px; }
-    .content-media { min-height: 300px; }
-    .video-placeholder, .image-placeholder { margin-bottom: 20px; }
-    .carousel-main { flex-direction: row; gap: 20px; align-items: center; }
-    .carousel-img { width: 100%; max-width: 400px; height: 300px; }
-    .image-display { flex: 1; max-width: 400px; }
-    .image-display .image-placeholder { width: 100%; height: 300px; }
-    .menu-carousel { text-align: center; }
-    .menu-grid-content { grid-template-columns: 1fr; gap: 20px; text-align: center; }
-    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-    .contact-info, .helpful-links, .follow-us { text-align: center; }
-    .form-grid { grid-template-columns: 1fr; }
-    .full-width { grid-column: span 1; }
-    .time-grid { grid-template-columns: 1fr; }
-    .about-banner h1 { font-size: 1.8rem; }
-    .carousel-header h2 { font-size: 1.8rem; }
+    .nav-links.active { 
+        right: 0; 
+    }
+    .zigzag, .content-row, .about-row { 
+        flex-direction: column; gap: 30px; 
+    }
+    .zigzag.reverse { 
+        flex-direction: column; 
+    }
+    .placeholder-box, .content-media, .video-placeholder, .image-placeholder { 
+        min-height: 300px; 
+        height: 300px; 
+        width: calc(100% - 40px); 
+        margin-left: 20px; 
+        margin-right: 20px; 
+    }
+    .content-media { 
+        min-height: 300px; 
+    }
+    .video-placeholder, .image-placeholder { 
+        margin-bottom: 20px; 
+    }
+    .carousel-main { 
+        flex-direction: row; 
+        gap: 20px; 
+        align-items: center; 
+    }
+    .carousel-img { 
+        width: 100%; 
+        max-width: 400px; 
+        height: 300px; 
+    }
+    .image-display { 
+        flex: 1; 
+        max-width: 400px; 
+    }
+    .image-display .image-placeholder { 
+        width: 100%; 
+        height: 300px; 
+    }
+    .menu-carousel { 
+        text-align: center; 
+    }
+    .menu-grid-content { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+        text-align: center; 
+    }
+    .footer-grid { 
+        grid-template-columns: 1fr; 
+        gap: 30px; 
+    }
+    .contact-info, .helpful-links, .follow-us { 
+        text-align: center; 
+    }
+    .form-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .full-width { 
+        grid-column: span 1; 
+    }
+    .time-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .about-banner h1 { 
+        font-size: 1.8rem; 
+    }
+    .carousel-header h2 { 
+        font-size: 1.8rem; 
+    }
 }
 
 /* Medium devices (tablets, 641px to 1024px) */
 @media (min-width: 641px) and (max-width: 1024px) {
-    .nav-links { gap: 20px; }
-    .zigzag, .content-row, .about-row { gap: 40px; }
-    .placeholder-box, .content-media { height: 300px; }
-    .carousel-img, .image-display .image-placeholder { width: 500px; height: 280px; }
-    .menu-grid-content { max-width: 700px; gap: 30px; }
-    .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
-    .time-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-links { 
+        gap: 20px; 
+    }
+    .zigzag, .content-row, .about-row { 
+        gap: 40px; 
+    }
+    .placeholder-box, .content-media { 
+        height: 300px; 
+    }
+    .carousel-img, .image-display .image-placeholder { 
+        width: 500px; 
+        height: 280px; 
+    }
+    .menu-grid-content { 
+        max-width: 700px; 
+        gap: 30px; 
+    }
+    .footer-grid { 
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    .time-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 /* Large devices (desktops, 1025px to 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .container { max-width: 1200px; }
+    .container { 
+        max-width: 1200px; 
+    }
 }
 
 /* XL devices (large desktops, 1441px and up) */
 @media (min-width: 1441px) {
-    .container { max-width: 1400px; }
+    .container { 
+        max-width: 1400px; 
+    }
 }
